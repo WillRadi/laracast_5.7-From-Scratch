@@ -59,6 +59,10 @@
             </div>
           </div>
         </div>
+        
+        <div>
+          abc
+        </div>
 
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -79,7 +83,7 @@
         </div>
 
         <!-- Project Two Row -->
-        <div class="row justify-content-center no-gutters">
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div class="col-lg-6">
             <a href="skills/play"><img class="img-fluid" src="img/demo-image-02.jpg" alt=""></a>
           </div>

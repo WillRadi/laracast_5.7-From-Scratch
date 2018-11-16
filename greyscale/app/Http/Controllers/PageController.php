@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $skills = DB::select("SELECT * FROM skills");
+
+        return view('welcome3');
     }
 
     public function viewSkill($skill)
