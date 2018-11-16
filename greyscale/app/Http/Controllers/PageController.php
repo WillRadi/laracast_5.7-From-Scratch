@@ -11,7 +11,7 @@ class PageController extends Controller
     {
         $skills = DB::select("SELECT * FROM skills");
 
-        return view('welcome3');
+        return view('skill_block')->with(compact('skill'));
     }
 
     public function viewSkill($skill)
