@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return view('welcome');
     }
+
+    public function viewSkill($skill)
+    {
+        return view("skills.{$skill}")->with(compact('skill'));
+    }
 }
