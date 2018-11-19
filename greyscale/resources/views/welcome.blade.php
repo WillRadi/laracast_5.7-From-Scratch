@@ -15,6 +15,9 @@
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/skills/create">Add skill</a>
+        </li>
     </ul>
   </div>
 

@@ -2,7 +2,7 @@
 
 @section('page_header')
 
-    <h1 class="mx-auto my-0 text-uppercase">{{ $skill }}</h1>
+    <h1 class="mx-auto my-0 text-uppercase">{{ $skillLabel }}</h1>
     
 @endsection
 

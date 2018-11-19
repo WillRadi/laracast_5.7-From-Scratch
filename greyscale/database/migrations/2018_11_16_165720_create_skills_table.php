@@ -18,7 +18,7 @@ class CreateSkillsTable extends Migration
             $table->string('name');
             $table->string('label');
             $table->text('description')->nullable();
-            $table->boolean('main')->nullable();
+            $table->boolean('main')->default(false);
             $table->timestamps();
         });
     }

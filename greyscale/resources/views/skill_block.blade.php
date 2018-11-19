@@ -8,11 +8,11 @@
     
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <a href="skills/{{ $s->name }}"><img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt=""></a>
+          <a href="skills/{{ $s->name }}/description"><img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt=""></a>
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <a href="skills/{{ $s->name }}"><h4>To {{ $s->label }}</h4></a>
+            <a href="skills/{{ $s->name }}/description"><h4>To {{ $s->label }}</h4></a>
             <p class="text-black-50 mb-0">{{ $s->description }}</p>
           </div>
         </div>
@@ -29,13 +29,13 @@
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <a href="skills/{{ $s->name }}"><img class="img-fluid" src="img/demo-image-01.jpg" alt=""></a>
+          <a href="skills/{{ $s->name }}/description"><img class="img-fluid" src="img/demo-image-01.jpg" alt=""></a>
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <a href="skills/{{ $s->name }}"><h4 class="text-white">To {{ $s->label }}</h4></a>
+                <a href="skills/{{ $s->name }}/description"><h4 class="text-white">To {{ $s->label }}</h4></a>
               <p class="mb-0 text-white-50">{{ $s->description }}</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
