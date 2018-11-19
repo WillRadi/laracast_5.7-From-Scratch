@@ -46,19 +46,6 @@
     <!-- Projects Section -->
     <section id="skills" class="projects-section bg-light">
       <div class="container">
-
-        <!-- Featured Project Row -->
-        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div class="col-xl-8 col-lg-7">
-            <a href="skills/dev"><img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt=""></a>
-          </div>
-          <div class="col-xl-4 col-lg-5">
-            <div class="featured-text text-center text-lg-left">
-              <a href="skills/dev"><h4>To Dev</h4></a>
-              <p class="text-black-50 mb-0">A única área que eu acho, que vai exigir muita atenção nossa, e aí eu já aventei a hipótese de até criar um ministério. É na área de... Na área... Eu diria assim, como uma espécie de analogia com o que acontece na área agrícola.</p>
-            </div>
-          </div>
-        </div>
         
         <div>
           @yield('skill_block')
