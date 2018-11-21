@@ -14,7 +14,9 @@ class BandsController extends Controller
      */
     public function index()
     {
-        //
+        $bands = Band::all();
+
+        return view('bands.index', compact('bands'));
     }
 
     /**
@@ -24,7 +26,7 @@ class BandsController extends Controller
      */
     public function create()
     {
-        //
+        return view('bands.create');
     }
 
     /**
@@ -35,7 +37,15 @@ class BandsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $band = new Band();
+
+        $band->name = request('name');
+        $band->genre = request('genre');
+        $band->main_song = request('main_song');
+
+        $band->save();
+
+        return redirect('/bands');
     }
 
     /**
@@ -57,7 +67,7 @@ class BandsController extends Controller
      */
     public function edit(Band $band)
     {
-        //
+        return view('bands.edit', compact('band'));
     }
 
     /**
@@ -69,7 +79,13 @@ class BandsController extends Controller
      */
     public function update(Request $request, Band $band)
     {
-        //
+        $band->name = request('name');
+        $band->genre = request('genre');
+        $band->main_song = request('main_song');
+
+        $band->save();
+
+        return redirect('/bands');
     }
 
     /**
@@ -80,6 +96,8 @@ class BandsController extends Controller
      */
     public function destroy(Band $band)
     {
-        //
+        Band::find($band->id)->delete();
+
+        return redirect('/bands');
     }
 }
