@@ -56,7 +56,7 @@ class BandsController extends Controller
      */
     public function show(Band $band)
     {
-        //
+        return view('band.show', compact('band'));
     }
 
     /**

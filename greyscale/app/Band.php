@@ -14,4 +14,9 @@ class Band extends Model
      * ou, pode-se usar o método guarded recebendo um array vazio.
      * guarded é o contrário do fillable: dizemos ao Laravel quais as propriedades não podem ser preenchidas
      */
+
+    public function songs()
+    {
+        return $this->hasMany(Song::class);
+    }
 }
