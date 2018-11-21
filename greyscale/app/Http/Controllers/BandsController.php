@@ -37,13 +37,13 @@ class BandsController extends Controller
      */
     public function store(Request $request)
     {
-        $band = new Band();
+        $requestData = $request->validate([
+            'name'      => ['required'],
+            'genre'     => ['required'],
+            'main_song' => ['required']
+        ]);
 
-        $band->name = request('name');
-        $band->genre = request('genre');
-        $band->main_song = request('main_song');
-
-        $band->save();
+        Band::create($requestData);
 
         return redirect('/bands');
     }
@@ -79,11 +79,7 @@ class BandsController extends Controller
      */
     public function update(Request $request, Band $band)
     {
-        $band->name = request('name');
-        $band->genre = request('genre');
-        $band->main_song = request('main_song');
-
-        $band->save();
+        $band->update(request(['name', 'genre', 'main_song']));
 
         return redirect('/bands');
     }
@@ -96,7 +92,7 @@ class BandsController extends Controller
      */
     public function destroy(Band $band)
     {
-        Band::find($band->id)->delete();
+        $band->delete();
 
         return redirect('/bands');
     }
