@@ -6,7 +6,7 @@
 
     @foreach ($bands as $b)
         <div>
-            <a href="bands/{{ $b->id }}/edit">
+            <a href="bands/{{ $b->id }}">
                 {{ $b->name }} <span class="tag is-danger">-></span> {{ $b->main_song }}
             </a>
         </div>

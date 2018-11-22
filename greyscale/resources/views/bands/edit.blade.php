@@ -38,18 +38,5 @@
     </div>
 
 </form>
-<br>
-<form action="/bands/{{ $band->id }}" method="post">
-    
-    @csrf
-    @method('DELETE')
-
-    <div class="field is-grouped">
-        <div class="control">
-        <button class="button is-link is-danger">Delete</button>
-        </div>
-    </div>
-
-</form>
 
 @endsection

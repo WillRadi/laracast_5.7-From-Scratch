@@ -16,6 +16,8 @@
 
 Route::resource('bands', 'BandsController');
 
+Route::patch('songs/{song}', 'SongsController@update');
+
 // Route::get('/', 'PageController@index');
 
 // Route::post('/', 'SkillController@store');
