@@ -44,7 +44,7 @@
         <div class="field">
             <label class="label">New song</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Band's name here" name="name">
+                <input class="input {{ $errors->has('name') ? 'is-danger' : '' }}" type="text" placeholder="Band's name here" name="name">
             </div>
         </div>
 

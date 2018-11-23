@@ -21,8 +21,8 @@ class Band extends Model
         return $this->hasMany(Song::class);
     }
 
-    public function addSong($songName)
+    public function addSong($name)
     {
-        $this->songs()->create(['name' => $songName]);
+        $this->songs()->create($name);
     }
 }

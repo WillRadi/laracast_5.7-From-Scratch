@@ -24,9 +24,9 @@ class SongsController extends Controller
 
     public function store(Band $band)
     {
-        // $validated = request()->validate(['name' => ['required']]);
+        $validData = request()->validate(['name' => 'required']);
 
-        $band->addSong(request('name'));
+        $band->addSong($validData);
 
         return back();
     }
