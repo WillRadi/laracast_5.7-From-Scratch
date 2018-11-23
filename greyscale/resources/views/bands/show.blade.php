@@ -8,7 +8,7 @@
 
 @if (count($band->songs) > 0)
 
-<div>
+<div class="box">
 
     <h4 class="title is-4">Songs:</h4>
     
@@ -35,16 +35,34 @@
 </div>
 
 @endif
+
+<div class="box">
+    <form action="/bands/{{ $band->id }}/song" method="post">
+        
+        @csrf
+        
+        <div class="field">
+            <label class="label">New song</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Band's name here" name="name">
+            </div>
+        </div>
+
+        <button class="button is-primary">Add</button>
+
+    </form>
+</div>
+
 <div class="display is-flex">
 
-<a href="/bands/{{ $band->id }}/edit" class="button is-link margin-right">Edit</a>
+<a href="/bands/{{ $band->id }}/edit" class="button is-link margin-right">Edit band</a>
 
 <form action="/bands/{{ $band->id }}" method="post">
     
     @csrf
     @method('DELETE')
 
-    <button class="button is-danger">Delete</button>
+    <button class="button is-danger">Delete band</button>
 
 </form>
 

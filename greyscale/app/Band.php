@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Song;
 
 class Band extends Model
 {
@@ -18,5 +19,10 @@ class Band extends Model
     public function songs()
     {
         return $this->hasMany(Song::class);
+    }
+
+    public function addSong($songName)
+    {
+        $this->songs()->create(['name' => $songName]);
     }
 }

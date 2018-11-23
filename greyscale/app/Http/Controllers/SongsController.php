@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Song;
+use App\Band;
 
 class SongsController extends Controller
 {
@@ -16,6 +17,16 @@ class SongsController extends Controller
         $song->update([
             'played' => request()->has('played')
         ]);
+
+        return back();
+    }
+
+
+    public function store(Band $band)
+    {
+        // $validated = request()->validate(['name' => ['required']]);
+
+        $band->addSong(request('name'));
 
         return back();
     }

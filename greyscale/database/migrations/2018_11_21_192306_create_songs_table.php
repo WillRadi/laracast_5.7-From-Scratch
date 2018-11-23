@@ -17,7 +17,6 @@ class CreateSongsTable extends Migration
             $table->increments('id');
             $table->integer('band_id');
             $table->string('name');
-            $table->string('cd');
             $table->timestamps();
         });
     }

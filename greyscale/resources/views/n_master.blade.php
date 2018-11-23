@@ -14,7 +14,7 @@
         <nav class="nav">
             <div class="nav-center">
                 <a href="/bands" class="nav-item">Home</a>
-                <a href="bands/create" class="nav-item">Create</a>
+                <a href="/bands/create" class="nav-item">Create</a>
             </div>
         </nav>
     </div>
