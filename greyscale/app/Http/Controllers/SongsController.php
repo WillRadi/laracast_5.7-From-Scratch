@@ -10,14 +10,14 @@ class SongsController extends Controller
 {
     public function update(Request $request, Song $song)
     {
-        // Método HAS vefirifa se há algum valor em 'played'.
-        // Se o método na view estiver desmarcado, ele retorna vazio.
-        // Por isso o HAS é necessário.
+        /**
+         * Método HAS verifica se há algum valor em 'played'.
+         * Se o método na view estiver desmarcado, ele retorna vazio.
+         * Por isso o HAS é necessário.
+         */
         
-        $song->update([
-            'played' => request()->has('played')
-        ]);
-
+        request()->has('played') ? $song->play() : $song->unplay();
+        
         return back();
     }
 

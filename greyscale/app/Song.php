@@ -12,4 +12,14 @@ class Song extends Model
     {
         return $this->belongsTo(Band::class);
     }
+
+    public function play()
+    {
+        $this->update(['played' => true]);
+    }
+
+    public function unplay()
+    {
+        $this->update(['played' => false]);
+    }
 }

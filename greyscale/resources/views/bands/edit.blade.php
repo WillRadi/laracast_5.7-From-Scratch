@@ -13,21 +13,21 @@
     <div class="field">
         <label class="label">Band name</label>
         <div class="control">
-            <input class="input" type="text" name="name" value="{{ $band->name }}">
+            <input class="input {{ $errors->has('name') ? 'is-danger' : '' }}" type="text" name="name" value="{{ $band->name }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label">Genre</label>
         <div class="control">
-        <input class="input" type="text" name="genre" value="{{ $band->genre }}">
+        <input class="input {{ $errors->has('genre') ? 'is-danger' : '' }}" type="text" name="genre" value="{{ $band->genre }}">
         </div>
     </div>
 
     <div class="field">
         <label class="label">Main song</label>
         <div class="control">
-        <input class="input" type="text" name="main_song" value="{{ $band->main_song }}">
+        <input class="input {{ $errors->has('main_song') ? 'is-danger' : '' }}" type="text" name="main_song" value="{{ $band->main_song }}">
         </div>
     </div>
 
@@ -36,6 +36,8 @@
         <button class="button is-link">save</button>
         </div>
     </div>
+
+    @include('errors')
 
 </form>
 

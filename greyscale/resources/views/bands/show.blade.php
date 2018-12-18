@@ -50,6 +50,8 @@
 
         <button class="button is-primary">Add</button>
 
+        @include('errors')
+
     </form>
 </div>
 

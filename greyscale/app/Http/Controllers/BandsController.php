@@ -79,7 +79,13 @@ class BandsController extends Controller
      */
     public function update(Request $request, Band $band)
     {
-        $band->update(request(['name', 'genre', 'main_song']));
+        $requestData = $request->validate([
+            'name'      => ['required'],
+            'genre'     => ['required'],
+            'main_song' => ['required']
+        ]);
+        
+        $band->update($requestData);
 
         return redirect('/bands');
     }
