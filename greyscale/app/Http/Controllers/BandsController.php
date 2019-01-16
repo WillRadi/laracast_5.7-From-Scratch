@@ -74,6 +74,24 @@ class BandsController extends Controller
      */
     public function show(Band $band)
     {
+        // authorize('nomeDoMetodoNaPolicy', banda em questão)
+        // $this->authorize('update', $band);
+
+        /**
+         * Outras maneiras de fazer a autorização:
+         * 
+         * abort_if()
+         * abort_unless()
+         * 
+         * Gate facede:
+         * \Gate::allows ou \Gate::denies()
+         * if (\Gate::denies('update', $band)) {
+         *  abort(403);
+         * }
+         */
+
+        
+
         return view('bands.show', compact('band'));
     }
 

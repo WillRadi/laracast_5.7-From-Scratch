@@ -1,0 +1,25 @@
+middlewere can, usado nas rotas:
+...->middlewere('can:update,project');
+
+Can é o middlewere
+update é o nome do método na classe de policy
+project é o objeto em questão. (no projeto de aprendizado é o Band).Nome deve ser igual ao que está no parâmetro das rotas
+
+Usando no middlewere não é mais necessário usar no BandController
+
+=============
+
+CAN tbm pode ser usado em arquivos Blade:
+
+@can('update', $project)
+
+    <a href="">Update</a>
+
+@endcan
+
+Ou seja, se o método Update da Policy retornar TRUE para o $project em questão, mostre o link Update
+
+
+========
+
+Método Boot, no Service Provider inicia primeiro. se ele retornar falso, daí sim vai pra Policy.
