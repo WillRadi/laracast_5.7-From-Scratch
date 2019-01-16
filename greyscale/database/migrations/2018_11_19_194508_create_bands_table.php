@@ -15,10 +15,13 @@ class CreateBandsTable extends Migration
     {
         Schema::create('bands', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('owner_id');
             $table->string('name');
             $table->string('genre');
             $table->string('main_song');
             $table->timestamps();
+
+            $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -8,13 +8,31 @@ use Illuminate\Http\Request;
 class BandsController extends Controller
 {
     /**
+     * Restringe acessos
+     */
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['create', 'destroy']);
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $bands = Band::all();
+        /**
+         * Helper auth()
+         * 
+         * auth()->id() = 4
+         * auth()->user() = instância atual de User
+         * auth()->check() = Booleano (está ou não logado)
+         * if(auth()->guest())
+         */
+        
+        // $bands = Band::all();
+        $bands = Band::where('owner_id', auth()->id())->get();
+
 
         return view('bands.index', compact('bands'));
     }
@@ -43,7 +61,7 @@ class BandsController extends Controller
             'main_song' => ['required']
         ]);
 
-        Band::create($requestData);
+        Band::create($requestData + ['owner_id' => auth()->id()]);
 
         return redirect('/bands');
     }

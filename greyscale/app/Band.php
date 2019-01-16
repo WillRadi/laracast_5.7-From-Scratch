@@ -8,7 +8,7 @@ use App\Song;
 class Band extends Model
 {
     protected $fillable = [
-        'name', 'genre', 'main_song'
+        'name', 'genre', 'main_song', 'owner_id'
     ];
 
     /**
